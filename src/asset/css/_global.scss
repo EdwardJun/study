@@ -237,3 +237,30 @@ a:active .blue {
 .multi-text-ellipsis {
   @include multi-text-ellipsis;
 }
+
+/* Float */
+.fl {float: left;}
+.fr {float: right;}
+
+/* position */
+.pr {position: relative;}
+
+@keyframes showIn {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes showOut {
+  from {
+      opacity: 1;
+  }
+
+  to {
+      opacity: 0;
+  }
+}

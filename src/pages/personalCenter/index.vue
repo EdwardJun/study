@@ -1,5 +1,5 @@
 <template>
-  <div class="pc-page" >
+  <scroll-view class="pc-page" :class="{pageFixed: isPageFixed}">
     <div class="banner">
       <img class="bg-img" src="/static/img/pc_banner_bg.jpg" alt="" @click="doClickToast()">
       <div class="header" @click="doClickToast()">
@@ -10,6 +10,7 @@
         <div class="name">刘刘海</div>
         <div class="phone" v-if="userPhone !=''" v-text="userPhone"></div>
         <a class="phone-text" v-else @click="isBindPhone()">前往绑定手机</a>
+        <a class="chooseTech-text" @click="chooseTech()">选择技师</a>
       </div>
       <div class="header-menu" @click="doClickToast()">
         <ul>
@@ -67,7 +68,27 @@
     <div class="exit-wrap" @click="doClickToast()">
       <menu-item :info="tc_info" :url="tc_imgUrl" :isBorderBottomHide="isBorderBottomHide"></menu-item>
     </div>
-  </div>
+    <div class="tech-shade" v-show="isShowTechShade" @click="cancleTechShade()" :class="{active: activeTechShade}"></div>
+    <div class="tech-scroll" v-show="isShowTechScroll" :class="{active: activeTechScroll}">
+      <div class="scroll-title">选择技师</div>
+      <scroll-view scroll-y class="tech-scrollBox" :style="{height: scrollHeight + 'rpx'}">
+        <ul>
+          <li>222</li>
+          <li>222</li>
+          <li>222</li>
+          <li>222</li>
+          <li>222</li>
+          <li>222</li>
+          <li>222</li>
+          <li>222</li>
+          <li>222</li>
+          <li>222</li>
+          <li>222</li>
+          <li>222</li>
+        </ul>
+      </scroll-view>
+    </div>
+  </scroll-view>
 </template>
 
 <script>
@@ -90,7 +111,15 @@
         tc_imgUrl: '/static/img/tcdl_icon.png',
         tc_info: '退出登录',
         isBorderBottomHide: true,
-        userPhone: ''
+        userPhone: '',
+
+        isShowTechShade: false, //用来控制是否显示
+        isShowTechScroll: false,
+        activeTechShade: false, //用来控制是否添加showOut样式
+        activeTechScroll: false,
+
+        scrollHeight: 250,
+        isPageFixed: false
       }
     },
     components: {
@@ -109,13 +138,46 @@
             Api.navigateTo('/pages/login/main')
           }
         },'',true,'否','','是','')
+      },
+      chooseTech () {
+        this.isShowTechShade = true
+        this.activeTechShade = false
+        this.isPageFixed = true
+        setTimeout(() => {
+          this.isShowTechScroll = true
+          this.activeTechScroll = false
+        },300)
+      },
+      cancleTechShade () {
+        this.isShowTechScroll = false
+        this.activeTechScroll = true
+        this.isPageFixed = false
+        setTimeout(() => {
+          this.isShowTechShade = false
+          this.activeTechShade = true
+          this.activeTechScroll = false
+        },300)
       }
     }
   }
 </script>
 
 <style lang="scss">
+  @import "~asset/css/_global";
+  $bg-width: 750px;
+  $bg-height: 1334px;
+  $tech-scroll-width: 300px;
+  $tech-scroll-height: 300px;
+  @function getWrap($bg, $tech) {
+    @return (($bg - $tech) / 2);
+  }
+
   .pc-page {
+    &.pageFixed {
+      overflow-y: hidden;
+      height: 100%;
+      position: fixed;
+    }
     .banner {
       position: relative;
       width: 100%;
@@ -169,6 +231,10 @@
           background-color: #ff8c86;
           border-radius: 10px;
           color: #ffffff;
+        }
+        .chooseTech-text {
+          @extend .phone-text;
+          margin-left: 20px;
         }
       }
       .header-menu {
@@ -268,6 +334,41 @@
       margin: 20px 0;
       .borderBottomHide {
         border-bottom: 0;
+      }
+    }
+    .tech-shade {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      background-color: rgba(0, 0, 0, .6);
+      animation-name: showIn;
+      animation-duration: .5s;
+      &.active {
+        animation-name: showOut;
+        animation-duration: .5s;
+      }
+    }
+    .tech-scroll {
+      position: fixed;
+      left:getWrap($bg-width, $tech-scroll-width);
+      top:getWrap($bg-height, $tech-scroll-height)-230;
+      width: $tech-scroll-width;
+      height: $tech-scroll-height;
+      background: #ffffff;
+      color: red;
+      z-index: 1000;
+      animation-name: showIn;
+      animation-duration: .5s;
+      &.active {
+        animation-name: showOut;
+        animation-duration: .5s;
+      }
+      .tech-scrollBox {
+        width: 100%;
+        overflow: hidden;
       }
     }
   }
