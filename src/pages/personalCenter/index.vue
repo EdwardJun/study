@@ -7,7 +7,7 @@
         <img class="user-set" src="/static/img/set_icon.png" alt="">
       </div>
       <div class="info">
-        <div class="name">刘刘海</div>
+        <div class="name">刘海</div>
         <div class="phone" v-if="userPhone !=''" v-text="userPhone"></div>
         <a class="phone-text" v-else @click="isBindPhone()">前往绑定手机</a>
         <a class="chooseTech-text" @click="chooseTech()">选择技师</a>
