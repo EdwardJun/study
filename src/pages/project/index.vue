@@ -193,7 +193,7 @@
         proIndex: ''
       }
     },
-    onShow() {
+    mounted() {
       this.initListHeight()
     },
     methods: {

@@ -11,6 +11,7 @@
         <div class="phone" v-if="userPhone !=''" v-text="userPhone"></div>
         <a class="phone-text" v-else @click="isBindPhone()">前往绑定手机</a>
         <a class="chooseTech-text" @click="chooseTech()">选择技师</a>
+        <a class="chooseTech-text" href="/pages/test/main">全选</a>
       </div>
       <div class="header-menu" @click="doClickToast()">
         <ul>
@@ -71,7 +72,7 @@
     <div class="tech-shade" v-show="isShowTechShade" @click="cancleTechShade()" :class="{active: activeTechShade}"></div>
     <div class="tech-scroll" v-show="isShowTechScroll" :class="{active: activeTechScroll}">
       <div class="scroll-title">选择技师</div>
-      <scroll-view scroll-y class="tech-scrollBox" :style="{height: scrollHeight + 'rpx'}">
+      <scroll-view scroll-y class="tech-scrollBox" :style="{height: scrollHeight + 'rpx'}" :scroll-top="techScrollTop">
         <ul>
           <li>222</li>
           <li>222</li>
@@ -119,7 +120,8 @@
         activeTechScroll: false,
 
         scrollHeight: 250,
-        isPageFixed: false
+        isPageFixed: false,
+        techScrollTop: 0
       }
     },
     components: {
