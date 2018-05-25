@@ -6,7 +6,7 @@
         <div class="nav-title" :class="{active: currshow == 'contact'}" @click="switchNavTitle('contact')">联系人</div>
       </div>
     </div>
-    <div class="list-wrap" :class="{active: currshow == 'contact'}">
+    <div class="list-wrap" :class="{active: currshow == 'contact', overflow: isFlow}">
       <scroll-view scroll-y class="mes-wrap" @scroll="doMesScroll" id="mesEle" :style="{height: mesHeight + 'px'}">
         <div class="item-div" v-for="(item, itemIndex) in mesDataList" :key="itemIndex">{{item}}</div>
         <div class="data-load-tip" v-show="dataLoad">加载数据</div>
@@ -26,8 +26,8 @@
         currshow: '',
         dataLoad: false,
         mesHeight: 600,
-        mesDataList: ['测试','测试','测试','测试','测试','测试','测试','测试','测试','测试'],
-        isAddData: false
+        mesDataList: ['测试','测试','测试','测试','测试','测试','测试','测试','测试','测试',],
+        isFlow: 'hidden',
       }
     },
     mounted() {
@@ -45,29 +45,23 @@
         let that = this
         let viewHeight = wx.getSystemInfoSync().windowHeight
         that.mesHeight = viewHeight -50
+        //console.log('mesHeight:'+ that.mesHeight)
       },
       doMesScroll(event) {
         let that = this
-        //console.log(event) //scroll-view组件中有默认转进event参数
+        //console.log(event)
         let eventObj = event.mp.detail
         let mesScrollTop = eventObj.scrollTop //滚动条滑动的距离
         let mesScrollHeight = eventObj.scrollHeight //元素可以滚动的高度
-        if(mesScrollTop + that.mesHeight * 1.2 >= mesScrollHeight) {
-          that.queryMesData()
+        console.log(mesScrollTop)
+        console.log(mesScrollHeight)
+        console.log(that.mesHeight)
+        if(mesScrollTop + that.mesHeight >= mesScrollHeight) {
+          Api.showToast('已到底了')
         }
       },
       queryMesData() {
-        let that = this
-        that.dataLoad = true
-        if(that.isAddData) {
-          return 
-        }
-        that.isAddData = true
-        that.mesDataList.push('1','2','3','4','5')
-        setTimeout(() => {
-          that.dataLoad = false
-          that.isAddData = false
-        },3000);
+
       }
     }
   }
@@ -75,7 +69,7 @@
 
 <style lang="scss" scoped>
   .test-page {
-    width: 100%;
+    width: 750px;
     overflow-x: hidden;
     .nav {
       width: 100%;
@@ -107,20 +101,19 @@
       }
     }
     .list-wrap {
-      width: 100%;
-      display: flex;
+      width: 1500px;
       transition: all 0.5s;
       &.active {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
       }
       &>div {
-        flex: 0 0 100%;
-        width: 100%;
+        width: 750px;
+        float: left;
         height: 100%;
       }
       .mes-wrap {
-        flex: 0 0 100%;
-        width: 100%;
+        width: 750px;
+        float: left;
         height: 100%;
         .item-div {
           width: 100%;
