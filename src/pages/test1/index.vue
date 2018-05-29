@@ -44,6 +44,7 @@
       initMesScrollH() {
         let that = this
         let viewHeight = wx.getSystemInfoSync().windowHeight
+        console.log(viewHeight)
         that.mesHeight = viewHeight -50
       },
       doMesScroll(event) {

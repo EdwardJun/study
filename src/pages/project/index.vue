@@ -7,171 +7,262 @@
         </div>
       </scroll-view>
     </div>
-    <scroll-view scroll-y class="project-con" :style="{height: scrollHeight + 'rpx'}" :scroll-into-view="proIndex" scroll-with-animation="true" enable-back-to-top="false">
-      <div class="recommen-item" id="am">
-        <div class="recommen-item-title">
+    <scroll-view scroll-y class="project-con" :style="{height: scrollHeight + 'px'}" :scroll-into-view="proIndex" scroll-with-animation="true" enable-back-to-top="false">
+      <div class="project-item" id="am">
+        <div class="project-item-title">
           <span class="title-desc">各式按摩</span>
-          <span class="all">全部<img src="/static/img/arrow_right_red.png" alt=""></span>
         </div>
-        <div class="recommen-con">
-          <div class="recommen-border">
-            <img class="recommen-img" src="/static/img/test2.jpg" alt="">
-            <div class="recommen-shade">面部spa</div>
-            <div class="recommen-footer">
-              <span class="recommen-footer-left"><span class="yuan">￥</span>698</span>
-              <span class="recommen-footer-right">120分钟</span>
+        <div class="project-con">
+          <div class="project-border">
+            <img class="project-img" src="/static/img/test2.jpg" alt="">
+            <div class="project-shade">面部spa</div>
+            <div class="project-footer">
+              <div class="normal">
+                <span class="normal-yuan">698</span>
+                /<span class="normal-time">120</span>分钟
+              </div>
+              <div class="addT">
+                <span class="addT-button">加钟</span>
+                ￥<span class="addT-yuan">88</span>
+                /<span class="addT-time">30</span>分钟
+              </div>
             </div>
           </div>
-          <div class="recommen-border">
-            <img class="recommen-img" src="/static/img/test2.jpg" alt="">
-            <div class="recommen-shade">面部spa</div>
-            <div class="recommen-footer">
-              <span class="recommen-footer-left"><span class="yuan">￥</span>698</span>
-              <span class="recommen-footer-right">120分钟</span>
+          <div class="project-border">
+            <img class="project-img" src="/static/img/test2.jpg" alt="">
+            <div class="project-shade">面部spa</div>
+            <div class="project-footer">
+              <div class="normal">
+                <span class="normal-yuan">698</span>
+                /<span class="normal-time">120</span>分钟
+              </div>
+              <div class="addT">
+                <span class="addT-button">加钟</span>
+                ￥<span class="addT-yuan">88</span>
+                /<span class="addT-time">30</span>分钟
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="recommen-item" id="zy">
-        <div class="recommen-item-title">
+      <div class="project-item" id="zy">
+        <div class="project-item-title">
           <span class="title-desc">大堂足浴</span>
-          <span class="all">全部<img src="/static/img/arrow_right_red.png" alt=""></span>
         </div>
-        <div class="recommen-con">
-          <div class="recommen-border">
-            <img class="recommen-img" src="/static/img/test2.jpg" alt="">
-            <div class="recommen-shade">面部spa</div>
-            <div class="recommen-footer">
-              <span class="recommen-footer-left"><span class="yuan">￥</span>698</span>
-              <span class="recommen-footer-right">120分钟</span>
+        <div class="project-con">
+          <div class="project-border">
+            <img class="project-img" src="/static/img/test2.jpg" alt="">
+            <div class="project-shade">面部spa</div>
+            <div class="project-footer">
+              <div class="normal">
+                <span class="normal-yuan">698</span>
+                /<span class="normal-time">120</span>分钟
+              </div>
+              <div class="addT">
+                <span class="addT-button">加钟</span>
+                ￥<span class="addT-yuan">88</span>
+                /<span class="addT-time">30</span>分钟
+              </div>
             </div>
           </div>
-          <div class="recommen-border">
-            <img class="recommen-img" src="/static/img/test2.jpg" alt="">
-            <div class="recommen-shade">面部spa</div>
-            <div class="recommen-footer">
-              <span class="recommen-footer-left"><span class="yuan">￥</span>698</span>
-              <span class="recommen-footer-right">120分钟</span>
+          <div class="project-border">
+            <img class="project-img" src="/static/img/test2.jpg" alt="">
+            <div class="project-shade">面部spa</div>
+            <div class="project-footer">
+              <div class="normal">
+                <span class="normal-yuan">698</span>
+                /<span class="normal-time">120</span>分钟
+              </div>
+              <div class="addT">
+                <span class="addT-button">加钟</span>
+                ￥<span class="addT-yuan">88</span>
+                /<span class="addT-time">30</span>分钟
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="recommen-item" id="spa">
-        <div class="recommen-item-title">
+      <div class="project-item" id="spa">
+        <div class="project-item-title">
           <span class="title-desc">SPA</span>
-          <span class="all">全部<img src="/static/img/arrow_right_red.png" alt=""></span>
         </div>
-        <div class="recommen-con">
-          <div class="recommen-border">
-            <img class="recommen-img" src="/static/img/test2.jpg" alt="">
-            <div class="recommen-shade">面部spa</div>
-            <div class="recommen-footer">
-              <span class="recommen-footer-left"><span class="yuan">￥</span>698</span>
-              <span class="recommen-footer-right">120分钟</span>
+        <div class="project-con">
+          <div class="project-border">
+            <img class="project-img" src="/static/img/test2.jpg" alt="">
+            <div class="project-shade">面部spa</div>
+            <div class="project-footer">
+              <div class="normal">
+                <span class="normal-yuan">698</span>
+                /<span class="normal-time">120</span>分钟
+              </div>
+              <div class="addT">
+                <span class="addT-button">加钟</span>
+                ￥<span class="addT-yuan">88</span>
+                /<span class="addT-time">30</span>分钟
+              </div>
             </div>
           </div>
-          <div class="recommen-border">
-            <img class="recommen-img" src="/static/img/test2.jpg" alt="">
-            <div class="recommen-shade">面部spa</div>
-            <div class="recommen-footer">
-              <span class="recommen-footer-left"><span class="yuan">￥</span>698</span>
-              <span class="recommen-footer-right">120分钟</span>
+          <div class="project-border">
+            <img class="project-img" src="/static/img/test2.jpg" alt="">
+            <div class="project-shade">面部spa</div>
+            <div class="project-footer">
+              <div class="normal">
+                <span class="normal-yuan">698</span>
+                /<span class="normal-time">120</span>分钟
+              </div>
+              <div class="addT">
+                <span class="addT-button">加钟</span>
+                ￥<span class="addT-yuan">88</span>
+                /<span class="addT-time">30</span>分钟
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="recommen-item" id="js">
-        <div class="recommen-item-title">
+      <div class="project-item" id="js">
+        <div class="project-item-title">
           <span class="title-desc">酒水</span>
-          <span class="all">全部<img src="/static/img/arrow_right_red.png" alt=""></span>
         </div>
-        <div class="recommen-con">
-          <div class="recommen-border">
-            <img class="recommen-img" src="/static/img/test2.jpg" alt="">
-            <div class="recommen-shade">面部spa</div>
-            <div class="recommen-footer">
-              <span class="recommen-footer-left"><span class="yuan">￥</span>698</span>
-              <span class="recommen-footer-right">120分钟</span>
+        <div class="project-con">
+          <div class="project-border">
+            <img class="project-img" src="/static/img/test2.jpg" alt="">
+            <div class="project-shade">面部spa</div>
+            <div class="project-footer">
+              <div class="normal">
+                <span class="normal-yuan">698</span>
+                /<span class="normal-time">120</span>分钟
+              </div>
+              <div class="addT">
+                <span class="addT-button">加钟</span>
+                ￥<span class="addT-yuan">88</span>
+                /<span class="addT-time">30</span>分钟
+              </div>
             </div>
           </div>
-          <div class="recommen-border">
-            <img class="recommen-img" src="/static/img/test2.jpg" alt="">
-            <div class="recommen-shade">面部spa</div>
-            <div class="recommen-footer">
-              <span class="recommen-footer-left"><span class="yuan">￥</span>698</span>
-              <span class="recommen-footer-right">120分钟</span>
+          <div class="project-border">
+            <img class="project-img" src="/static/img/test2.jpg" alt="">
+            <div class="project-shade">面部spa</div>
+            <div class="project-footer">
+              <div class="normal">
+                <span class="normal-yuan">698</span>
+                /<span class="normal-time">120</span>分钟
+              </div>
+              <div class="addT">
+                <span class="addT-button">加钟</span>
+                ￥<span class="addT-yuan">88</span>
+                /<span class="addT-time">30</span>分钟
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="recommen-item" id="ls">
-        <div class="recommen-item-title">
+      <div class="project-item" id="ls">
+        <div class="project-item-title">
           <span class="title-desc">零食</span>
-          <span class="all">全部<img src="/static/img/arrow_right_red.png" alt=""></span>
         </div>
-        <div class="recommen-con">
-          <div class="recommen-border">
-            <img class="recommen-img" src="/static/img/test2.jpg" alt="">
-            <div class="recommen-shade">面部spa</div>
-            <div class="recommen-footer">
-              <span class="recommen-footer-left"><span class="yuan">￥</span>698</span>
-              <span class="recommen-footer-right">120分钟</span>
+        <div class="project-con">
+          <div class="project-border">
+            <img class="project-img" src="/static/img/test2.jpg" alt="">
+            <div class="project-shade">面部spa</div>
+            <div class="project-footer">
+              <div class="normal">
+                <span class="normal-yuan">698</span>
+                /<span class="normal-time">120</span>分钟
+              </div>
+              <div class="addT">
+                <span class="addT-button">加钟</span>
+                ￥<span class="addT-yuan">88</span>
+                /<span class="addT-time">30</span>分钟
+              </div>
             </div>
           </div>
-          <div class="recommen-border">
-            <img class="recommen-img" src="/static/img/test2.jpg" alt="">
-            <div class="recommen-shade">面部spa</div>
-            <div class="recommen-footer">
-              <span class="recommen-footer-left"><span class="yuan">￥</span>698</span>
-              <span class="recommen-footer-right">120分钟</span>
+          <div class="project-border">
+            <img class="project-img" src="/static/img/test2.jpg" alt="">
+            <div class="project-shade">面部spa</div>
+            <div class="project-footer">
+              <div class="normal">
+                <span class="normal-yuan">698</span>
+                /<span class="normal-time">120</span>分钟
+              </div>
+              <div class="addT">
+                <span class="addT-button">加钟</span>
+                ￥<span class="addT-yuan">88</span>
+                /<span class="addT-time">30</span>分钟
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="recommen-item" id="vip1">
-        <div class="recommen-item-title">
+      <div class="project-item" id="vip1">
+        <div class="project-item-title">
           <span class="title-desc">VIP1</span>
-          <span class="all">全部<img src="/static/img/arrow_right_red.png" alt=""></span>
         </div>
-        <div class="recommen-con">
-          <div class="recommen-border">
-            <img class="recommen-img" src="/static/img/test2.jpg" alt="">
-            <div class="recommen-shade">面部spa</div>
-            <div class="recommen-footer">
-              <span class="recommen-footer-left"><span class="yuan">￥</span>698</span>
-              <span class="recommen-footer-right">120分钟</span>
+        <div class="project-con">
+          <div class="project-border">
+            <img class="project-img" src="/static/img/test2.jpg" alt="">
+            <div class="project-shade">面部spa</div>
+            <div class="project-footer">
+              <div class="normal">
+                <span class="normal-yuan">698</span>
+                /<span class="normal-time">120</span>分钟
+              </div>
+              <div class="addT">
+                <span class="addT-button">加钟</span>
+                ￥<span class="addT-yuan">88</span>
+                /<span class="addT-time">30</span>分钟
+              </div>
             </div>
           </div>
-          <div class="recommen-border">
-            <img class="recommen-img" src="/static/img/test2.jpg" alt="">
-            <div class="recommen-shade">面部spa</div>
-            <div class="recommen-footer">
-              <span class="recommen-footer-left"><span class="yuan">￥</span>698</span>
-              <span class="recommen-footer-right">120分钟</span>
+          <div class="project-border">
+            <img class="project-img" src="/static/img/test2.jpg" alt="">
+            <div class="project-shade">面部spa</div>
+            <div class="project-footer">
+              <div class="normal">
+                <span class="normal-yuan">698</span>
+                /<span class="normal-time">120</span>分钟
+              </div>
+              <div class="addT">
+                <span class="addT-button">加钟</span>
+                ￥<span class="addT-yuan">88</span>
+                /<span class="addT-time">30</span>分钟
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="recommen-item" id="vip2">
-        <div class="recommen-item-title">
+      <div class="project-item" id="vip2">
+        <div class="project-item-title">
           <span class="title-desc">VIP2</span>
-          <span class="all">全部<img src="/static/img/arrow_right_red.png" alt=""></span>
         </div>
-        <div class="recommen-con">
-          <div class="recommen-border">
-            <img class="recommen-img" src="/static/img/test2.jpg" alt="">
-            <div class="recommen-shade">面部spa</div>
-            <div class="recommen-footer">
-              <span class="recommen-footer-left"><span class="yuan">￥</span>698</span>
-              <span class="recommen-footer-right">120分钟</span>
+        <div class="project-con">
+          <div class="project-border">
+            <img class="project-img" src="/static/img/test2.jpg" alt="">
+            <div class="project-shade">面部spa</div>
+            <div class="project-footer">
+              <div class="normal">
+                <span class="normal-yuan">698</span>
+                /<span class="normal-time">120</span>分钟
+              </div>
+              <div class="addT">
+                <span class="addT-button">加钟</span>
+                ￥<span class="addT-yuan">88</span>
+                /<span class="addT-time">30</span>分钟
+              </div>
             </div>
           </div>
-          <div class="recommen-border">
-            <img class="recommen-img" src="/static/img/test2.jpg" alt="">
-            <div class="recommen-shade">面部spa</div>
-            <div class="recommen-footer">
-              <span class="recommen-footer-left"><span class="yuan">￥</span>698</span>
-              <span class="recommen-footer-right">120分钟</span>
+          <div class="project-border">
+            <img class="project-img" src="/static/img/test2.jpg" alt="">
+            <div class="project-shade">面部spa</div>
+            <div class="project-footer">
+              <div class="normal">
+                <span class="normal-yuan">698</span>
+                /<span class="normal-time">120</span>分钟
+              </div>
+              <div class="addT">
+                <span class="addT-button">加钟</span>
+                ￥<span class="addT-yuan">88</span>
+                /<span class="addT-time">30</span>分钟
+              </div>
             </div>
           </div>
         </div>
@@ -188,8 +279,7 @@
       return {
         navList: ['各式按摩','大堂足浴','SPA','酒水','零食','VIP1','VIP2'],
         navIndex: 0, //nav active状态的下标
-        scrollHeight: 1000,
-        projectScrollTop: 500,
+        scrollHeight: 600,
         proIndex: ''
       }
     },
@@ -221,7 +311,7 @@
       initListHeight() {
         let that = this
         let viewHeight = wx.getSystemInfoSync().windowHeight
-        that.scrollHeight = viewHeight*2 - 44 - 64
+        that.scrollHeight = viewHeight -40
       },
     }
   }
@@ -229,6 +319,11 @@
 
 <style lang="scss">
   @import "~asset/css/_global";
+  $rec-border-h: 460px;
+  $rec-img-h: 325px;
+  @function recShade ($rec-border-h, $rec-img-h) {
+    @return $rec-border-h - $rec-img-h;
+  }
   
   .project-page {
     .nav {
@@ -240,25 +335,26 @@
         white-space: nowrap;
         .nav-item {
           display: inline-block;
-          width: 150px;
+          padding: 0 25px;
           height: 80px;
           line-height: 80px;
           box-sizing: border-box;
           text-align: center;
           a {
             position: relative;
-            font-size: 30px;
+            font-size: 28px;
+            color: #000000;
             &.active {
+              color: #ff6b69;
               &.active::after {
                 position: absolute;
-                left: 20px;
+                left: 50%;
                 bottom: 0;
                 content: " ";
                 display: inline-block;
-                width: 70%;
-                border: 1px solid red;
-                margin-top: 5px;
-                text-align: center;
+                width: 30px;
+                border: 5px solid #ff6b69;;
+                margin: 0 0 0 -15px;
               }
             }
           }
@@ -266,27 +362,39 @@
       }
     }
     .project-con {
-      .recommen-item {
-        margin-top: 50px;
-        .recommen-item-title {
+      .project-item {
+        margin-top: 55px;
+        &:first-child {
+          margin-top: 50px;
+        }
+        &:last-child {
+          margin-bottom: 110px;
+        }
+        .project-item-title {
           width: 100%;
-          height: 35px;
+          height: auto;
           display: flex;
+          justify-content: center;
+          align-items: center;
           .title-desc {
             display: inline-block;
             flex: 1;
             color: #333333;
             font-size: 33px;
+            text-align: center;
           }
-          .title-desc:before {
+          .title-desc:before, .title-desc:after{
             content: " ";
             display: inline-block;
-            width: 0;
-            height: 38px;
-            border: 0;
-            border-left: 5px solid #f66;
-            margin: 0 20px;
-            vertical-align: text-bottom;
+            width: 46px;
+            border: 1px solid #333333;
+            box-sizing: border-box;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+            margin: 0 26px;
+            vertical-align: middle;
           }
           .all {
             width: 150px;
@@ -299,58 +407,68 @@
             }
           }
         }
-        .recommen-con {
-          padding: 36px 0 0 38px;
+        .project-con {
+          padding: 50px 0 0 25px;
           display: flex;
-          .recommen-border {
-            flex: 1;
-            flex: 0 0 323px;
+          .project-border {
+            flex: 0 0 335px;
             position: relative;
-            width: 323px;
-            height: 406px;
-            box-shadow: 4px  6px 10px rgb(182, 180, 180);
+            width: 335px;
+            height: $rec-border-h;
+            box-shadow: 4px  6px 1px rgb(182, 180, 180);
             margin-right: 30px;
-              .recommen-img {
-                width: 323px;
-                height: 321px;
+              .project-img {
+                width: 335px;
+                height: $rec-img-h;
               }
-              .recommen-shade {
+              .project-shade {
                 box-sizing: border-box;
                 position: absolute;
-                bottom: 85px;
-                padding-left: 15px;
+                bottom: recShade($rec-border-h,$rec-img-h);
+                padding-left: 22px;
                 width: 100%;
-                height: 57px;
-                line-height: 57px;
-                font-size: 31px;
+                height: 60px;
+                line-height: 60px;
+                font-size: 32px;
                 color: #FFFFFF;
-                background-color: #616161;
-                opacity: 0.7;
-                filter:alpha(opacity=70);
+                background-color: #000000;
+                opacity: 0.5;
+                filter:alpha(opacity=50);
               }
-            .recommen-footer {
+            .project-footer {
               position: absolute;
-              top: 321px;
+              top: $rec-img-h;
               width: 100%;
-              height: 85px;
-              line-height: 85px;
-              display: flex;
-              align-items: baseline;
-              .recommen-footer-left {
-                flex: 1;
-                margin-left: 14px;
-                font-size: 37px;
-                color: #ff8c85;
-                .yuan {
-                  font-size: 23px;
+              height: recShade($rec-border-h,$rec-img-h);
+              padding: 30px 0 0 22px;
+              .normal {
+                font-size: 24px;
+                color: #666666;
+                .normal-yuan {
+                  font-size: 38px;
+                  color: #ff6666;
+                  &::before {
+                    content: "￥";
+                    font-size: 24px;
+                    color: #ff6666;
+                  }
                 }
               }
-              .recommen-footer-right {
-                flex: 1;
-                text-align: right;
-                margin-right: 10px;
-                font-size: 23px;
-                color: #616161;
+              .addT {
+                margin: 5px 0 0 0;
+                font-size: 24px;
+                color: #666666;
+                .addT-button {
+                  display: inline-block;
+                  width: 68px;
+                  height: 30px;
+                  line-height: 1.5;
+                  border-radius: 50px;
+                  background-color: #ffd163;
+                  color: #624a2c;
+                  font-size: 22px;
+                  text-align: center;
+                }
               }
             }
           }
