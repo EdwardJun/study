@@ -37,9 +37,10 @@ export default {
             'pages/logs/main',
             'pages/tech/main',
             'pages/personalCenter/main',
-            '^pages/project/main',
+            'pages/project/main',
             'pages/test/main',
-            'pages/test1/main'
+            'pages/test1/main',
+            '^pages/test2/main'
         ],
         window: {
             backgroundTextStyle: 'light',
