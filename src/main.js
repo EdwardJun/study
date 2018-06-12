@@ -74,7 +74,7 @@ export default {
             }]
           },
         networkTimeout: {
-            request: 10000, 
+            request: 10000,
             connectSocket: 10000,
             downloadFile: 10000,
             uploadFile: 10000
