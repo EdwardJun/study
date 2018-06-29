@@ -2,11 +2,11 @@
   <div class="test-page">
     <div class="checkedItem">
       <div>
-        <label for="allCheck" @click="checkAll"><input type="checkbox" id="allCheck" :checked="isAllCheck">全选</label>
+        <label for="allCheck" @click="checkAll"><input type="checkbox" id="allCheck" :checked="isAllCheck">全选1</label>
       </div>
       <checkbox-group @change="checkboxChange">
-        <label class="checkbox" v-for="(item,itemIndex) in items" :key="itemIndex" @click="checkOne(item)">
-          <checkbox :value="item.name" :checked="item.checked" v-model="item.checked"/>{{item.value}}
+        <label class="checkbox" v-for="(item,itemIndex) in items" :key="itemIndex" @click="checkOne(item,itemIndex)">
+          <checkbox :value="item.name" :checked="item.checked" v-model="item.checked"/>{{item.value}}{{item.checked}}
         </label>
       </checkbox-group>
     </div>
@@ -23,12 +23,12 @@
         isAllCheck: false,
         childCheck: false,
         items: [
-          {name: 'USA', value: '美国'},
-          {name: 'CHN', value: '中国'},
-          {name: 'BRA', value: '巴西'},
-          {name: 'JPN', value: '日本'},
-          {name: 'ENG', value: '英国'},
-          {name: 'TUR', value: '法国'},
+          {name: 'USA', value: '美国',checked: false},
+          {name: 'CHN', value: '中国',checked: false},
+          {name: 'BRA', value: '巴西',checked: false},
+          {name: 'JPN', value: '日本',checked: false},
+          {name: 'ENG', value: '英国',checked: false},
+          {name: 'TUR', value: '法国',checked: false},
         ],
         numList: []
       }
@@ -37,41 +37,28 @@
       checkAll() {
         let that = this
         that.isAllCheck = !that.isAllCheck
-        that.items.forEach((obj,index) => {
-          obj.checked = that.isAllCheck
-        });
-        this.$nextTick(() => {
-          console.log('更新DOM')
+        that.items.map((obj,index) => {
+          that.$set(obj,'checked',that.isAllCheck)
         })
+        // this.items = that.items
       },
-      checkboxChange(e) {
-        console.log(e.mp.detail.value)
+      checkOne(obj,index) {
         let that = this
-        if(e.mp.detail.value.length == that.items.length){
+        let checkList = []
+        that.items.map((itemObj,itemIndex) => {
+          if(itemIndex == index) {
+            that.$set(itemObj,'checked',!itemObj.checked)
+          }
+          if(itemObj.checked) {
+            checkList.push(itemObj)
+          }
+          // this.items = that.items
+        })
+        if(checkList.length == that.items.length) {
           that.isAllCheck = true
-        }else {
+        }else{
           that.isAllCheck = false
         }
-        this.$nextTick(() => {
-          console.log('更新DOM')
-        })
-      },
-      checkOne(obj) {
-        var that = this
-        console.log(obj.name)
-        this.items.forEach((item,index) => {
-        if(item.name == obj.name) {
-          console.log(this.items[this.items.indexOf(item)])
-          //this.$set(this.items,this.items[this.items.indexOf(item)].checked,!obj.checked)
-          this.$set(this.items,this.items[this.items.indexOf(obj)].checked,!obj.checked)
-          console.log(obj.checked)
-          this.$nextTick(() => {
-
-          })
-          
-          }
-        });
-        
       }
     }
   }
